@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -x
+diff one/Sentence.hs two/Fast.hs
+
+(cd one && ghc -O2 -o one Sentence.hs)
+(cd two && ghc -O2 -o two Fast.hs)
+
+time ./one/one 70
+time ./two/two 70

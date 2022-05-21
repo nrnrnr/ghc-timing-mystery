@@ -1,0 +1,23 @@
++ diff one/Sentence.hs two/Fast.hs
++ cd one
++ ghc -O2 -o one Sentence.hs
+Loaded package environment from /home/nr/.ghc/x86_64-linux-9.0.2/environments/default
+[1 of 1] Compiling Main             ( Sentence.hs, Sentence.o )
+Linking one ...
++ cd two
++ ghc -O2 -o two Fast.hs
+Loaded package environment from /home/nr/.ghc/x86_64-linux-9.0.2/environments/default
+[1 of 1] Compiling Main             ( Fast.hs, Fast.o )
+Linking two ...
++ time ./one/one 70
+solved { width = 70, steps = 54 } -- SOLVED in 54 steps
+-- [17,4,7,6,58,9,10,16,31,2,4,16,8,29,23,8,0,11,46,37,11,9,8,5,12,0]
+-- JP, A while back you posed the challenge of a self-describing message.  This topic came up in my meeting last week.  I am pleased to tell you that this message contains seventeen a's, four b's, seven c's, six d's, fifty-eight e's, nine f's, ten g's, sixteen h's, thirty-one i's, two j's, four k's, sixteen l's, eight m's, twenty-nine n's, twenty-three o's, eight p's, eleven r's, forty-six s's, thirty-seven t's, eleven u's, nine v's, eight w's, five x's, and twelve y's.  I hope you like it.  Norman.  P.S. I would love to hear about your solution.
+11.51user 0.00system 0:11.51elapsed 99%CPU (0avgtext+0avgdata 8952maxresident)k
+0inputs+0outputs (0major+1464minor)pagefaults 0swaps
++ time ./two/two 70
+solved { width = 70, steps = 54 } -- SOLVED in 54 steps
+-- [17,4,7,6,58,9,10,16,31,2,4,16,8,29,23,8,0,11,46,37,11,9,8,5,12,0]
+-- JP, A while back you posed the challenge of a self-describing message.  This topic came up in my meeting last week.  I am pleased to tell you that this message contains seventeen a's, four b's, seven c's, six d's, fifty-eight e's, nine f's, ten g's, sixteen h's, thirty-one i's, two j's, four k's, sixteen l's, eight m's, twenty-nine n's, twenty-three o's, eight p's, eleven r's, forty-six s's, thirty-seven t's, eleven u's, nine v's, eight w's, five x's, and twelve y's.  I hope you like it.  Norman.  P.S. I would love to hear about your solution.
+9.66user 0.00system 0:09.66elapsed 100%CPU (0avgtext+0avgdata 8936maxresident)k
+0inputs+0outputs (0major+1459minor)pagefaults 0swaps
